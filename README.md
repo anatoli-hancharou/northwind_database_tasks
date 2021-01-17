@@ -32,3 +32,14 @@
 | Get all orders shipped to UK with employees.                      | GET       | /Orders?$filter=ShipCountry eq 'UK'                     |
 | Get all products with price between 10 and 15.                    | GET       | /Products?$filter=UnitPrice le 10.0000 and UnitPrice gt 15.0000  |
 | Select CompanyName and Country from Suppliers.                    | GET       | /Suppliers?$select=CompanyName,Country                  |
+
+
+| Breakpoint | Thread ID   | Thread Managed ID | Thread Name   |
+| ---------- | ----------- | ----------------- | --------------|
+| #1.1       |  6024       |  0                | Main Thread   |
+| #1.2       |  17996      |  7                | Worker Thread |
+| #1.3       |  6024       |  1                | Main Thread   |
+| #2.1       |  8772       |  1                | Main Thread   |
+| #2.2       |  20300      |  10               | Worker Thread |
+| #2.3       |  20300      |  10               | Worker Thread |
+
